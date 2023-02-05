@@ -52,7 +52,7 @@ router.post("/userLogin", async (req, res, next) => {
 
 router.put("/updateUser/:id", async (req, res) => {
   try {
-    const updateUser = await Hotel.findByIdAndUpdate(
+    const updateUser = await User.findByIdAndUpdate(
       req.params.id,
       { $set: req.body },
       { new: true }
@@ -74,7 +74,7 @@ router.delete("/deleteUser/:id", async (req, res) => {
 
 router.get("/getAllUser", async (req, res) => {
   try {
-    const getAllUsers = await Hotel.find({});
+    const getAllUsers = await User.find({});
     res.status(200).json({ getAllUsers, counts: getAllUsers.length });
   } catch (error) {
     res.status(500).json({ message: "Something went wrong" });
