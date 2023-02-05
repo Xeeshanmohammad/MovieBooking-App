@@ -8,7 +8,13 @@ const ShowSchema = new mongoose.Schema({
         type:Number,
         required:true
     },
-    
+   
+    ShowNumber:[{
+        number:Number,
+        notAvailableDate:[{
+            type:Date
+        }]
+    }]
  
 },{timestamps:true})
 
