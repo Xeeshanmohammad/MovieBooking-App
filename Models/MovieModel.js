@@ -37,7 +37,7 @@ const MovieSchema = new mongoose.Schema({
         min:0,
         max:5
     },
-    rooms : {
+    show : {
         type:[String],
         required:true
     },
@@ -48,8 +48,7 @@ const MovieSchema = new mongoose.Schema({
     featured : {
         type:Boolean,
         default:false
-    },
-
+    }
 })
 
 module.exports = mongoose.model('Movie', MovieSchema)
